@@ -1,0 +1,11 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<title>Express + EJS</title>
+<h1>🎉 It's working! 🎉</h1>
+<% Object.keys(articles).forEach(function (id) { %>
+  <article>
+    <h2><%= articles[id].title %></h2>
+    <p><%= articles[id].content %></p>
+  </article>
+<% }) %>
