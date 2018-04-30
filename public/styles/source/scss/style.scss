@@ -1,0 +1,45 @@
+@import "_variables";
+@import "_nav";
+@import "_header";
+@import "_footer";
+@import "_gallery";
+@import "_band";
+
+body {
+  font-family: $font;
+  font-size: $font-size;
+  margin: 0;
+}
+
+h1 {
+  font-size: $font-size * 2.8;
+}
+
+h2 {
+  font-size: $font-size * 1.5;
+}
+
+h3 {
+  font-size: $font-size * 1.25;
+}
+
+h4 {
+  font-size: $font-size;
+}
+
+h5 {
+  font-size: $font-size * 0.83;
+}
+
+h6 {
+  font-size: $font-size * 0.67;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+article {
+  padding: 0 8%;
+}

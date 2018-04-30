@@ -1,0 +1,22 @@
+<div class="nav-head">
+  <div id="main-nav-btn" class="open-nav-btn"></div>
+  <div class="topic"><a href="/">News</a></div>
+  <div class="logo"><a href="/">Logo</a></div>
+  <div class="search-box">
+    <input type="text" placeholder="Search Here...">
+  </div>
+</div>
+<nav id="nav" class="main-nav">
+  <div class="nav-wrap">
+    <div id="close-nav" class="close-btn">X</div>
+    <ul class="nav">
+      <% Object.keys(bands).forEach(function (id) { %>
+      <li><a href="<%= bands[id].location %>"><%= bands[id].band %></a></li>
+      <% }) %>
+      <hr>
+      <li><a href="/">Contact Us</a></li>
+      <li><a href="/">Terms</a></li>
+    </ul>
+  </div>
+</nav>
+<script src="../../js/script.js"></script>

@@ -1,11 +1,24 @@
 <% include ../partials/head %>
+<% include ../partials/nav %>
 <% include ../partials/header %>
+<article>
+  <p>This is a practice page for practicing creating webpages using Express + EJS.  The content of this site is all about my favorite music, so click around and enjoy!</p>
+</article>
+<main class="album-grid">
+    <% Object.keys(bands).forEach(function (id) { %>
+    <div class="column">
+        <div class="album-card">
+            <div class="border"></div>
+            <img src="../../images/album-artwork<%= bands[id].image_path %>">
+            <a href="<%= bands[id].location %>">
+                <div class="description">
+                    <p><%= bands[id].album %> by <%= bands[id].band %></p>
+                    <p>Click Here for More!</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <% }) %>
+</main>
 
-<title>Express + EJS</title>
-<h1>🎉 It's working! 🎉</h1>
-<% Object.keys(articles).forEach(function (id) { %>
-  <article>
-    <h2><%= articles[id].title %></h2>
-    <p><%= articles[id].content %></p>
-  </article>
-<% }) %>
+<% include ../partials/footer %>

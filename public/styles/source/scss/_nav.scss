@@ -1,0 +1,92 @@
+.nav-head {
+  background: $nav-bg;
+  height: 45px;
+  position: relative;
+  .open-nav-btn {
+    background: black; /* change this to something not black */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .topic {
+    display: inline-block;
+    font-size: $font-size * .7;
+    margin: 11px 0 0;
+    padding-left: 65px;
+  }
+  .logo {
+    margin: 6px auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 50%;
+  }
+  .search-box {
+    border: 1px solid black;
+    float: right;
+    margin: 11px;
+    input {
+      border: none;
+      padding: 2px 3px;
+    }
+  }
+}
+
+.main-nav {
+  // background: $nav-bg; // set this to rgba(202, 121, 220, 0) on load
+  background: rgba(202, 121, 220, 1);
+  display: none; // this also needs to be scripted
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: 250ms;
+  width: 300px;
+  z-index: 1;
+  .nav-wrap {
+    margin: 20px 30px;
+    position: relative;
+    .close-btn {
+      background: #000;
+      border-radius: 50%;
+      color: rgba(202, 121, 220, 1);
+      padding: 0 7px;
+      position: absolute;
+      top: -65;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .nav {
+      list-style: none;
+      margin: 80px 0 0;
+      padding: 0;
+      li {
+        margin: 10px 0;
+        padding: 0 5px;
+        transition: 200ms;
+        &:hover {
+          background: #000;
+          cursor: pointer;
+          a {
+            color: rgba(202, 121, 220, 1);
+          }
+        }
+      }
+    }
+  }
+}
+.show {
+  opacity: 1;
+}
