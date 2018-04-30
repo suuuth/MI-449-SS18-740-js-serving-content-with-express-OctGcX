@@ -1,5 +1,5 @@
 node_modules/
-compiled/
+public/styles/source/
 
 *.log*
 *.DS_Store
